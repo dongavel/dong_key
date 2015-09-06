@@ -37,17 +37,8 @@ var drawGrid = function(game){
 }
 
 var drawClickPoint = function(game) {
-  var centerX = game.viewport.width / 2;
-  var centerY = game.viewport.height / 2;
-  var radius = 8;
-
-  game.ctx.beginPath();
-  game.ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-  game.ctx.fillStyle = 'green';
-  game.ctx.fill();
-  game.ctx.lineWidth = 3;
-  game.ctx.strokeStyle = '#003300';
-  game.ctx.stroke();
+  waiting = false
+  game.socket.send("ready");
 }
 
 var drawOccludedCell = function(x, y) {

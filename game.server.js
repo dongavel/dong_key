@@ -140,16 +140,7 @@ game_server.server_onMessage = function(client,message) {
                 //the condition of game over
                 console.log(x_array)
                 console.log(y_array)
-                if ( x_array[0] == 4 && y_array[0] == 1 &&
-                     x_array[1] == 5 && y_array[1] == 3 &&
-                     x_array[2] == 5 && y_array[2] == 2
-                    ){
-                    //game over
-                    new_round = true
-                }
-                else{
-                    new_round = false
-                }
+                new_round = true
             }else{
                 //the game is not started
                 new_round = true
